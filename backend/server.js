@@ -10,6 +10,7 @@ import chatbotRouter from "./routes/chatbotRoute.js";
 
 // app config
 import dotenv from "dotenv";
+import prescriptionRouter from "./routes/prescriptionRoute.js";
 
 dotenv.config();
 const app = express()
@@ -29,6 +30,9 @@ app.use("/api/doctor", doctorRouter)
 app.get("/", (req, res) => {
   res.send("API Working")
 });
+app.use(
+  "/api/prescription", prescriptionRouter
+);
 app.use("/api/chatbot", chatbotRouter);
 
 app.listen(port, () => console.log(`Server started on PORT:${port}`))
