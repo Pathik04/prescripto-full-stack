@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { assets } from '../assets/assets'
-import { DoctorContext } from '../context/DoctorContext'
-import { AdminContext } from '../context/AdminContext'
-import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { assets } from '../assets/assets';
+import { AdminContext } from '../context/AdminContext';
+import { DoctorContext } from '../context/DoctorContext';
 
 const Navbar = () => {
 
