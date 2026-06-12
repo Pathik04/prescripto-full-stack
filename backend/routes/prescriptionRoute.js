@@ -3,6 +3,7 @@ import express from "express";
 import {
   createPrescription,
   getPrescriptions,
+  downloadPrescriptionPDF,
 } from "../controllers/prescriptionController.js";
 
 const prescriptionRouter = express.Router();
@@ -15,6 +16,11 @@ prescriptionRouter.post(
 prescriptionRouter.get(
   "/all",
   getPrescriptions
+);
+
+prescriptionRouter.get(
+  "/pdf/:id",
+  downloadPrescriptionPDF
 );
 
 export default prescriptionRouter;
