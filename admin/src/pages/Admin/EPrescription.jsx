@@ -1,11 +1,8 @@
 import axios from "axios";
-import { useState, useContext } from "react";
-import { AppContext } from "../context/AppContext";
-
+import { useState } from "react";
 const EPrescription = () => {
 
-  const { backendUrl } = useContext(AppContext);
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [patientData, setPatientData] = useState({
     patientName: "",
     age: "",
