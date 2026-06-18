@@ -40,7 +40,7 @@ const ChatBot = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/chatbot/chat",
+         `${import.meta.env.VITE_BACKEND_URL}/api/chatbot/chat`,
         {
           message: userInput,
         }
